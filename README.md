@@ -1,7 +1,7 @@
 # basic-socket-p5
 Simple NodeJS server to relay messages from a serial port device (e.g. Arduino) to a P5 sketch (webpage)
 
-![breadboard](images/pot-to-arduino-breadboard-sm.jpg) ![P5 output](images/basic-socket-p5-output.png)
+![breadboard](images/pot-to-arduino-breadboard-sm.jpg)![P5 output](images/basic-socket-p5-output.png)
 
 ## Credits
 Much of the socket.io-related code is from this excellent tutorial by Adam Thomas:
