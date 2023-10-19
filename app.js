@@ -1,6 +1,9 @@
-/* basic-socket */
+/* basic-socket-app.js - a super basic webserver */
 
-/* setup super basic webserver */
+/* originally based on code from Adam Thomas */
+/* modified by Rolf Widenfelt */
+
+
 var http = require('http');
 var fs = require('fs');
 
@@ -13,9 +16,14 @@ const parser = new parsers.Readline({
     delimiter: '\r\n'
 });
 
-/* for an Arduino on my macmini, port is '/dev/cu.usbmodem142201' */
+/* CONFIGURATION NEEDED */
+/* set "arduino_device" to the "port" that your Arduino is using. */
+/* if unsure, check the Arduino IDE under Tools/Port. */
+/* also, make sure you aren't running the Serial Monitor at the same time. */
 
-var port = new SerialPort('/dev/cu.usbmodem142201',{
+arduino_device = '/dev/cu.usbmodem146301';
+
+var port = new SerialPort(arduino_device, {
     baudRate: 115200,
     dataBits: 8,
     parity: 'none',
@@ -47,4 +55,4 @@ parser.on('data', function(data){
     io.emit('data', data);
 });
 
-app.listen(3000);
+app.listen(3000);  // access this server with http://localhost:3000/
