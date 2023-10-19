@@ -1,11 +1,17 @@
-# basic-socket-app
-Simple NodeJS server to relay messages from a serial port device (e.g. Arduino) to a web page
+# basic-socket-p5
+Simple NodeJS server to relay messages from a serial port device (e.g. Arduino) to a P5 sketch (webpage)
 
 ## Credits
-Much of what is here is based on code from this excellent tutorial by Adam Thomas:
+Much of the socket.io-related code is from this excellent tutorial by Adam Thomas:
 
 [Communicating from an Arduino to an HTML/JavaScript Webpage]
 (https://www.youtube.com/watch?v=gQYsUjT-IBo)
+
+## Overview
+
+This setup allows a simple analog input on an Arduino to control
+some aspect of a P5 sketch.  In this case, just the color of a filled circle.
+It is just a simple demonstration. You are encouraged to add more features.
 
 ## Instructions
 
