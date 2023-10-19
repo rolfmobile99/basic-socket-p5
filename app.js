@@ -33,11 +33,29 @@ var port = new SerialPort(arduino_device, {
 
 port.pipe(parser);
 
-
+// create a simple web server.
+// note: this is overly simplified to just handle three files:
+// - index.html
+// - sketch.js
+// - style.css
+//
 var app = http.createServer(function(req, res) {
 
-    res.writeHead(200, {'Content-Type': 'text/html'});
-    res.end(indexpage);
+    if (req.url == '/' || req.url == '/index.html') { //check the URL of the current request
+        res.writeHead(200, {'Content-Type': 'text/html'});
+        res.end(indexpage);
+    } else if (req.url == "/sketch.js") {
+        let page = fs.readFileSync('sketch.js');
+        res.writeHead(200, {'Content-Type': 'text/javascript'});
+        res.end(page);
+    } else if (req.url == "/style.css") {
+        let page = fs.readFileSync('style.css');
+        res.writeHead(200, {'Content-Type': 'text/css'});
+        res.end(page);
+    } else {
+        res.statusCode = 404;
+        res.end('Invalid Request!');
+    }
 });
 
 
