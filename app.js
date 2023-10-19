@@ -1,7 +1,7 @@
 /* basic-socket-app.js - a super basic webserver */
 
 /* originally based on code from Adam Thomas */
-/* modified by Rolf Widenfelt */
+/* modified by Rolf Widenfelt - 2023 */
 
 
 var http = require('http');

@@ -3,7 +3,7 @@
 // this "listens" for data that is forwarded by a node JS server.
 // it uses socket.io, a JavaScript library.
 //
-// author: Rolf Widenfelt
+// author: Rolf Widenfelt (c) 2023
 
 
 let RAD = 50;
