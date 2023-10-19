@@ -1,28 +1,17 @@
-<!doctype html>
-<html>
-    <head>
-    <title>Comm with Arduino using socket.io</title>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/addons/p5.sound.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
 
-    <script src='https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js'></script>
-    </head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8" />
 
-    <body>
-
-        <h1>Comm with Arduino using socket.io</h1>
-        <div id='sample'></div>
-
-        <script>
-
-        var socket = io();
-
-        socket.on('data', function(data){
-
-            console.log(data);
-            document.getElementById('sample').innerHTML = data;
-
-        });
-
-        </script>
-
-    </body>
+  </head>
+  <body>
+    <main>
+    </main>
+    <script src="sketch.js"></script>
+  </body>
 </html>
