@@ -13,6 +13,24 @@ This setup allows a simple analog input on an Arduino to control
 some aspect of a P5 sketch.  In this case, just the color of a filled circle.
 It is just a simple demonstration. You are encouraged to add more features.
 
+
+## Dependencies
+
+This project requires **node** to run.
+Instructions for installing it are here:
+```
+https://nodejs.dev/en/
+```
+
+Once **node** is installed, you will need to fetch the necessary packages, which are
+described in `package.json`.
+Run **npm** in the same directory where the files are:
+```
+npm install
+```
+
+If that works, then you are ready to run this demo.
+
 ## Instructions
 
 Start your Arduino with the sketch called **basic-analog-out**.
