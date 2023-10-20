@@ -69,7 +69,7 @@ io.on('connection', function(data) {
 
 
 parser.on('data', function(data){
-    // console.log(data);
+    console.log("->", data);
     io.emit('data', data);
 });
 
