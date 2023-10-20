@@ -31,14 +31,21 @@ Run **npm** in the same directory where the files are:
 npm install
 ```
 
-If that works, then you are ready to run this demo.
+If that works, then you are ready for the next steps.
 
 ## Instructions
 
-Start your Arduino with the sketch called **basic-analog-out**.
+Wire up a simple circuit that connects a potentiometer to the analog input A0
+on your Arduino.
+
+You will need to edit `app.js` to set it to your port.
+Inside the Arduino IDE you can see which port the Arduino is attached to.
+Instructions are inside the file (look for CONFIGURATION NEEDED).
+
+Start your Arduino with the sketch from this repository called **basic-analog-out**.
 Of course, the USB cable needs to stay connected to your computer.
 
-Then, start node server with:
+Then, start the **node** server with:
 ```
 node app.js
 ```
